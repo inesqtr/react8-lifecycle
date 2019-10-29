@@ -7,44 +7,55 @@ class Form extends Component {
         super(props);
         this.state = {
             title: '',
-            globalTitle: 'Global Title',
+            globalTitle: '',
         };
         this.onChange = this.onChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
-    onChange(e) {
+    componentDidMount() {
+        console.log('Rendered Form');
+    }
 
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value })
     }
 
     submitForm(e) {
         e.preventDefault();
 
-        this.setState({
-            globalTitle: 'My Form'
-        })
-
+        this.setState(
+            (state) => {
+                return {
+                    ...state,
+                    globalTitle: "My form-"
+                }
+            },
+            () => {
+                document.title = this.state.globalTitle
+            }
+        )
     }
 
-   
+    componentDidUpdate() {
+        console.log('Title changed')
+    }
+
+
 
     render() {
         return (
             <div className="Form">
-                <h1 onSubmit={this.submitForm}> {this.state.globalTitle}</h1>
+                <h1>Your Form</h1>
 
-                <form className="container" onSubmit={this.submitForm}>
+                <form onSubmit={this.submitForm}>
                     <div className="form-data">
-                        <label htmlFor="url">title</label>
+                        <label htmlFor="url">Write here</label>
                         <textarea
                             type="text"
-                            id="comment"
-                            name="comment"
-                            value={this.state.comment}
+                            id="textarea"
+                            name="title"
                             onChange={this.onChange}
-                            rows={10}
-                            placeholder={"Describe your past experience and skills"}
-                            required
                         />
                     </div>
                     <hr />
