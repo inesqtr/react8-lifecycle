@@ -1,73 +1,43 @@
+## `WCS - Quest-React Lifecycle`
 
-NETLIFY LINK
+---
 
+Wild Code School quest with react.js
+
+
+#### *Deployed At:*
 https://dazzling-edison-ce4ec2.netlify.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### *Goal:*
 
-## Available Scripts
+Create a React component including a form.
 
-In the project directory, you can run:
+The component will have a state containing 2 keys:
+title: (string): state relating to the form textglobalTitle: (string): state relating to the page title
 
-### `yarn start`
+The form will have a text field too and a validation button
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The text field will be controlled by the component state
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+After the component has been rendered, we will display “Rendered Form” in the browser console
 
-### `yarn test`
+During the form validation, we will update the component "globalTitle" state with the following value: "My form - "
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once the component is updated, we will display “Title changed” in the browser consoleOnce completed, commit and push the application to GithubDeploy the project on NetlifyAdd the project link in your project READMEPost your GitHub project link to the solution for this challenge
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### *Validation criteria:*
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. The GitHub project README contains the link to the deployed application on Netlify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. The application displays a form.
 
-### `yarn eject`
+3. The form contains a text field and a button.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. The text field is controlled by the component state.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. When the component is displayed, a message appears in the console.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. The page title changes during the form validation.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+7. A message appears in the console during the page title update.
